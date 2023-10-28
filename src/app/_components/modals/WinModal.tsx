@@ -16,9 +16,9 @@ const WinModal: FC<winModalProps> = ({ time, moves, setModal }) => {
     const { push } = useRouter()
     const { dispatch } = useGameContext()
     const handleSetUpNewGame = () => {
-        setModal(false)
         push("/")
         dispatch({type: "RESET_GAME"})
+        setModal(false)
     }
 
     return (
